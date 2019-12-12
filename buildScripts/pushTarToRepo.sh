@@ -12,7 +12,6 @@ mkdir -p deb/tmp/
 cp -rf HadoopSourceBinary deb/tmp/
 cp -rf DEBIAN deb/
 
-#sh make-flipkart-yarn-2.9.0-deb 
-dpkg -b deb flipkart-hadoop-tar-test.deb
-reposervice --host repo-svc-app-0001.nm.flipkart.com --port "8080" pubrepo --repo  fk-hadoop-tar-test-source  --appkey dummy --debs flipkart-hadoop-tar-test.deb
+dpkg -b deb flipkart-hadoop-tar-push.deb
+reposervice --host repo-svc-app-0001.nm.flipkart.com --port "8080" pubrepo --repo  fk-hadoop-tar-push-source  --appkey dummy --debs flipkart-hadoop-tar-push.deb
 cd $cwd
