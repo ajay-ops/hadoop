@@ -1,0 +1,15 @@
+apt-get install --yes --allow-unauthenticated build-essential
+
+apt-get install --yes --allow-unauthenticated cmake make  libsnappy-dev bzip2 libbz2-dev libjansson-dev 
+
+#apt-get install --yes --allow-unauthenticated cmake make snappy libsnappy-dev bzip2 libbz2-dev libjansson-dev libfuse-dev 
+
+## Build Base Hadoop
+wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz
+tar xfv protobuf-2.5.0.tar.gz
+cd protobuf-2.5.0
+./configure
+make clean
+make
+make install
+ldconfig
